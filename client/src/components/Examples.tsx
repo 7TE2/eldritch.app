@@ -137,11 +137,46 @@ export function Examples() {
               <span className="text-xs eldritch-text-comment">JSON</span>
             </div>
             <div className="p-6 font-mono text-sm overflow-x-auto">
-              <pre className="whitespace-pre-wrap"><code>
-                {jsonExample
-                  .replace(/"name"|"type"|"colors"|"editor.background"|"editor.foreground"|"editorCursor.foreground"|"editor.selectionBackground"|"editor.lineHighlightBackground"|"editorLineNumber.foreground"|"editorLineNumber.activeForeground"|"tokenColors"|"scope"|"settings"|"foreground"/g, '<span class="eldritch-text-green">$&</span>')
-                  .replace(/"Eldritch"|"dark"|"#1a1a1a"|"#eeeee6"|"#a277ff"|"#444444"|"#2a2a2a"|"#7c8377"|"Comments"|"Keywords"|"comment"|"punctuation.definition.comment"|"keyword"|"storage.type"|"storage.modifier"/g, '<span class="eldritch-text-green">$&</span>')}
-              </code></pre>
+              <pre className="whitespace-pre-wrap">
+                <code className="flex flex-col">
+                  <div>{"{"}</div>
+                  <div>  <span className="eldritch-text-green">"name"</span>: <span className="eldritch-text-green">"Eldritch"</span>,</div>
+                  <div>  <span className="eldritch-text-green">"type"</span>: <span className="eldritch-text-green">"dark"</span>,</div>
+                  <div>  <span className="eldritch-text-green">"colors"</span>: {"{"}</div>
+                  <div>    <span className="eldritch-text-green">"editor.background"</span>: <span className="eldritch-text-green">"#1a1a1a"</span>,</div>
+                  <div>    <span className="eldritch-text-green">"editor.foreground"</span>: <span className="eldritch-text-green">"#eeeee6"</span>,</div>
+                  <div>    <span className="eldritch-text-green">"editorCursor.foreground"</span>: <span className="eldritch-text-green">"#a277ff"</span>,</div>
+                  <div>    <span className="eldritch-text-green">"editor.selectionBackground"</span>: <span className="eldritch-text-green">"#444444"</span>,</div>
+                  <div>    <span className="eldritch-text-green">"editor.lineHighlightBackground"</span>: <span className="eldritch-text-green">"#2a2a2a"</span>,</div>
+                  <div>    <span className="eldritch-text-green">"editorLineNumber.foreground"</span>: <span className="eldritch-text-green">"#7c8377"</span>,</div>
+                  <div>    <span className="eldritch-text-green">"editorLineNumber.activeForeground"</span>: <span className="eldritch-text-green">"#eeeee6"</span></div>
+                  <div>  {"}"},</div>
+                  <div>  <span className="eldritch-text-green">"tokenColors"</span>: [</div>
+                  <div>    {"{"}</div>
+                  <div>      <span className="eldritch-text-green">"name"</span>: <span className="eldritch-text-green">"Comments"</span>,</div>
+                  <div>      <span className="eldritch-text-green">"scope"</span>: [</div>
+                  <div>        <span className="eldritch-text-green">"comment"</span>,</div>
+                  <div>        <span className="eldritch-text-green">"punctuation.definition.comment"</span></div>
+                  <div>      ],</div>
+                  <div>      <span className="eldritch-text-green">"settings"</span>: {"{"}</div>
+                  <div>        <span className="eldritch-text-green">"foreground"</span>: <span className="eldritch-text-green">"#7c8377"</span></div>
+                  <div>      {"}"}</div>
+                  <div>    {"}"},</div>
+                  <div>    {"{"}</div>
+                  <div>      <span className="eldritch-text-green">"name"</span>: <span className="eldritch-text-green">"Keywords"</span>,</div>
+                  <div>      <span className="eldritch-text-green">"scope"</span>: [</div>
+                  <div>        <span className="eldritch-text-green">"keyword"</span>,</div>
+                  <div>        <span className="eldritch-text-green">"storage.type"</span>,</div>
+                  <div>        <span className="eldritch-text-green">"storage.modifier"</span></div>
+                  <div>      ],</div>
+                  <div>      <span className="eldritch-text-green">"settings"</span>: {"{"}</div>
+                  <div>        <span className="eldritch-text-green">"foreground"</span>: <span className="eldritch-text-green">"#a277ff"</span></div>
+                  <div>      {"}"}</div>
+                  <div>    {"}"}</div>
+                  <div>  ]</div>
+                  <div>{"}"}</div>
+                </code>
+              </pre>
             </div>
           </div>
         </div>

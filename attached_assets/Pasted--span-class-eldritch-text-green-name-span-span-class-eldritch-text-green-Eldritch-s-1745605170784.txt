@@ -1,0 +1,29 @@
+{
+  <span class="eldritch-text-green">"name"</span>: <span class="eldritch-text-green">"Eldritch"</span>,
+  <span class="eldritch-text-green">"type"</span>: <span class="eldritch-text-green">"dark"</span>,
+  <span class="eldritch-text-green">"colors"</span>: {
+    <span class="eldritch-text-green">"editor.background"</span>: <span class="eldritch-text-green">"#1a1a1a"</span>,
+    <span class="eldritch-text-green">"editor.foreground"</span>: <span class="eldritch-text-green">"#eeeee6"</span>,
+    <span class="eldritch-text-green">"editorCursor.foreground"</span>: <span class="eldritch-text-green">"#a277ff"</span>,
+    <span class="eldritch-text-green">"editor.selectionBackground"</span>: <span class="eldritch-text-green">"#444444"</span>,
+    <span class="eldritch-text-green">"editor.lineHighlightBackground"</span>: <span class="eldritch-text-green">"#2a2a2a"</span>,
+    <span class="eldritch-text-green">"editorLineNumber.foreground"</span>: <span class="eldritch-text-green">"#7c8377"</span>,
+    <span class="eldritch-text-green">"editorLineNumber.activeForeground"</span>: <span class="eldritch-text-green">"#a277ff"</span>
+  },
+  <span class="eldritch-text-green">"tokenColors"</span>: [
+    {
+      <span class="eldritch-text-green">"name"</span>: <span class="eldritch-text-green">"Comments"</span>,
+      <span class="eldritch-text-green">"scope"</span>: [<span class="eldritch-text-green">"comment"</span>, <span class="eldritch-text-green">"punctuation.definition.comment"</span>],
+      <span class="eldritch-text-green">"settings"</span>: {
+        <span class="eldritch-text-green">"foreground"</span>: <span class="eldritch-text-green">"#7c8377"</span>
+      }
+    },
+    {
+      <span class="eldritch-text-green">"name"</span>: <span class="eldritch-text-green">"Keywords"</span>,
+      <span class="eldritch-text-green">"scope"</span>: [<span class="eldritch-text-green">"keyword"</span>, <span class="eldritch-text-green">"storage.type"</span>, <span class="eldritch-text-green">"storage.modifier"</span>],
+      <span class="eldritch-text-green">"settings"</span>: {
+        <span class="eldritch-text-green">"foreground"</span>: <span class="eldritch-text-green">"#a277ff"</span>
+      }
+    }
+  ]
+}
