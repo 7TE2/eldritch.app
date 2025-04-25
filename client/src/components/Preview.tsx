@@ -17,18 +17,33 @@ export function Preview() {
             </div>
             <div className="p-6 font-mono text-sm overflow-x-auto">
               <pre className="whitespace-pre-wrap"><code>
-                {javascriptExample
-                  .replace(/function/g, '<span class="eldritch-text-blue">function</span>')
-                  .replace(/calculateFibonacci/g, '<span class="eldritch-text-yellow">calculateFibonacci</span>')
-                  .replace(/\bn\b|\ba\b|\bb\b|\bnext\b|\bi\b/g, '<span class="eldritch-text-red">$&</span>')
-                  .replace(/\/\/ Return fibonacci number at position n|\/\/ Example class with inheritance/g, '<span class="eldritch-text-comment">$&</span>')
-                  .replace(/if|return|let|for|const|this|class/g, '<span class="eldritch-text-purple">$&</span>')
-                  .replace(/0|1|2/g, '<span class="eldritch-text-cyan">$&</span>')
-                  .replace(/\+\+|\+|=|<=|\.|\`|\$\{|\}/g, '<span class="eldritch-text-pink">$&</span>')
-                  .replace(/Entity/g, '<span class="eldritch-text-blue">Entity</span>')
-                  .replace(/constructor|describe/g, '<span class="eldritch-text-yellow">$&</span>')
-                  .replace(/`Entity: \${/g, '<span class="eldritch-text-green">`Entity: ${</span>')
-                  .replace(/}`/g, '<span class="eldritch-text-green">}`</span>')}
+                <div className="eldritch-text-blue">function <span className="eldritch-text-yellow">calculateFibonacci</span>(<span className="eldritch-text-red">n</span>) {"{"}</div>
+                <div className="pl-4 eldritch-text-comment">// Return fibonacci number at position n</div>
+                <div className="pl-4 eldritch-text-purple">if</div><span> (</span><span className="eldritch-text-red">n</span> <span className="eldritch-text-pink">{"<="}</span> <span className="eldritch-text-cyan">1</span>) {"{"}
+                <div className="pl-8 eldritch-text-purple">return</div><span> </span><span className="eldritch-text-red">n</span><span>;</span>
+                <div className="pl-4">{"}"}</div>
+                <div>&nbsp;</div>
+                <div className="pl-4 eldritch-text-purple">let</div><span> </span><span className="eldritch-text-red">a</span> <span className="eldritch-text-pink">{"="}</span> <span className="eldritch-text-cyan">0</span><span>, </span><span className="eldritch-text-red">b</span> <span className="eldritch-text-pink">{"="}</span> <span className="eldritch-text-cyan">1</span><span>;</span>
+                <div>&nbsp;</div>
+                <div className="pl-4 eldritch-text-purple">for</div><span> (</span><span className="eldritch-text-purple">let</span> <span className="eldritch-text-red">i</span> <span className="eldritch-text-pink">{"="}</span> <span className="eldritch-text-cyan">2</span><span>; </span><span className="eldritch-text-red">i</span> <span className="eldritch-text-pink">{"<="}</span> <span className="eldritch-text-red">n</span><span>; </span><span className="eldritch-text-red">i</span><span className="eldritch-text-pink">++</span><span>) {"{"}</span>
+                <div className="pl-8 eldritch-text-purple">const</div><span> </span><span className="eldritch-text-red">next</span> <span className="eldritch-text-pink">{"="}</span> <span className="eldritch-text-red">a</span> <span className="eldritch-text-pink">+</span> <span className="eldritch-text-red">b</span><span>;</span>
+                <div className="pl-8 eldritch-text-red">a</div><span> </span><span className="eldritch-text-pink">{"="}</span><span> </span><span className="eldritch-text-red">b</span><span>;</span>
+                <div className="pl-8 eldritch-text-red">b</div><span> </span><span className="eldritch-text-pink">{"="}</span><span> </span><span className="eldritch-text-red">next</span><span>;</span>
+                <div className="pl-4">{"}"}</div>
+                <div>&nbsp;</div>
+                <div className="pl-4 eldritch-text-purple">return</div><span> </span><span className="eldritch-text-red">b</span><span>;</span>
+                <div>{"}"}</div>
+                <div>&nbsp;</div>
+                <div className="eldritch-text-comment">// Example class with inheritance</div>
+                <div className="eldritch-text-purple">class</div><span> </span><span className="eldritch-text-blue">Entity</span><span> {"{"}</span>
+                <div className="pl-4 eldritch-text-yellow">constructor</div><span>(name) {"{"}</span>
+                <div className="pl-8 eldritch-text-purple">this</div><span className="eldritch-text-pink">.</span><span>name </span><span className="eldritch-text-pink">{"="}</span><span> name;</span>
+                <div className="pl-4">{"}"}</div>
+                <div>&nbsp;</div>
+                <div className="pl-4 eldritch-text-yellow">describe</div><span>() {"{"}</span>
+                <div className="pl-8 eldritch-text-purple">return</div><span> </span><span className="eldritch-text-green">`Entity: ${"{"}</span><span className="eldritch-text-purple">this</span><span className="eldritch-text-pink">.</span><span>name</span><span className="eldritch-text-green">{"}"}`</span><span>;</span>
+                <div className="pl-4">{"}"}</div>
+                <div>{"}"}</div>
               </code></pre>
             </div>
           </div>
@@ -40,21 +55,27 @@ export function Preview() {
             </div>
             <div className="p-6 font-mono text-sm overflow-x-auto">
               <pre className="whitespace-pre-wrap"><code>
-                {terminalExample
-                  .replace(/user@eldritch/g, '<span class="eldritch-text-green">user@eldritch</span>')
-                  .replace(/~\/projects|~\/projects\/eldritch-theme/g, '<span class="eldritch-text-blue">$&</span>')
-                  .replace(/\$ ls -la|\$ cd eldritch-theme|\$ npm install|\$ npm run build/g, '<span class="eldritch-text-foreground">$&</span>')
-                  .replace(/total 32|-rw-r--r--|run `npm fund` for details/g, '<span class="eldritch-text-foreground">$&</span>')
-                  .replace(/added|packages, and|packages are looking for funding/g, '<span class="eldritch-text-purple">$&</span>')
-                  .replace(/128|37/g, '<span class="eldritch-text-yellow">$&</span>')
-                  .replace(/> eldritch-theme@1.0.0 build|> vsce package/g, '<span class="eldritch-text-yellow">$&</span>')
-                  .replace(/SUCCESS/g, '<span class="eldritch-text-green">SUCCESS</span>')
-                  .replace(/✓ Packaged: eldritch-theme-1.0.0.vsix/g, '<span class="eldritch-text-foreground">✓ Packaged: eldritch-theme-1.0.0.vsix</span>')
-                  .replace(/Size: 13.37 MB/g, '<span class="eldritch-text-blue">Size: 13.37 MB</span>')
-                  .replace(/\._/g, '<span class="eldritch-text-foreground">_</span>')
-                  .replace(/\.|\.\.|\.\.\./g, '<span class="eldritch-text-blue">$&</span>')
-                  .replace(/eldritch-theme|src/g, '<span class="eldritch-text-blue">$&</span>')
-                  .replace(/config.json|README.md/g, '<span class="eldritch-text-foreground">$&</span>')}
+                <div><span className="eldritch-text-green">user@eldritch</span>:<span className="eldritch-text-blue">~/projects</span>$ ls -la</div>
+                <div>total 32</div>
+                <div>drwxr-xr-x  5 user user 4096 Oct 31 13:37 <span className="eldritch-text-blue">.</span></div>
+                <div>drwxr-xr-x 18 user user 4096 Oct 31 12:13 <span className="eldritch-text-blue">..</span></div>
+                <div>-rw-r--r--  1 user user  837 Oct 31 13:36 config.json</div>
+                <div>drwxr-xr-x  8 user user 4096 Oct 31 13:37 <span className="eldritch-text-blue">eldritch-theme</span></div>
+                <div>-rw-r--r--  1 user user 1823 Oct 31 13:24 README.md</div>
+                <div>drwxr-xr-x  3 user user 4096 Oct 31 13:30 <span className="eldritch-text-blue">src</span></div>
+                <div>&nbsp;</div>
+                <div><span className="eldritch-text-green">user@eldritch</span>:<span className="eldritch-text-blue">~/projects</span>$ cd eldritch-theme</div>
+                <div><span className="eldritch-text-green">user@eldritch</span>:<span className="eldritch-text-blue">~/projects/eldritch-theme</span>$ npm install</div>
+                <div><span className="eldritch-text-purple">added</span> <span className="eldritch-text-yellow">128</span> <span className="eldritch-text-purple">packages, and</span> <span className="eldritch-text-yellow">37</span> <span className="eldritch-text-purple">packages are looking for funding</span></div>
+                <div>run `npm fund` for details</div>
+                <div>&nbsp;</div>
+                <div><span className="eldritch-text-green">user@eldritch</span>:<span className="eldritch-text-blue">~/projects/eldritch-theme</span>$ npm run build</div>
+                <div><span className="eldritch-text-yellow">{">"} eldritch-theme@1.0.0 build</span></div>
+                <div><span className="eldritch-text-yellow">{">"} vsce package</span></div>
+                <div>&nbsp;</div>
+                <div><span className="eldritch-text-green">SUCCESS</span> ✓ Packaged: eldritch-theme-1.0.0.vsix</div>
+                <div><span className="eldritch-text-blue">Size: 13.37 MB</span></div>
+                <div><span className="eldritch-text-green">user@eldritch</span>:<span className="eldritch-text-blue">~/projects/eldritch-theme</span>$ _</div>
               </code></pre>
             </div>
           </div>

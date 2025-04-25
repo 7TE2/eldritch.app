@@ -15,14 +15,25 @@ export function Examples() {
             </div>
             <div className="p-6 font-mono text-sm overflow-x-auto">
               <pre className="whitespace-pre-wrap"><code>
-                {htmlExample
-                  .replace(/<!DOCTYPE html>/g, '<span class="eldritch-text-pink">&lt;!DOCTYPE html&gt;</span>')
-                  .replace(/<html|<head|<meta|<title|<link|<body|<header|<h1|<nav|<script/g, '<span class="eldritch-text-red">$&</span>')
-                  .replace(/<\/html|<\/head|<\/title|<\/body|<\/header|<\/h1|<\/nav|<\/script/g, '<span class="eldritch-text-red">$&</span>')
-                  .replace(/lang=|charset=|name=|content=|rel=|href=|class=|id=/g, '<span class="eldritch-text-yellow">$&</span>')
-                  .replace(/"en"|"UTF-8"|"viewport"|"width=device-width, initial-scale=1.0"|"stylesheet"|"styles.css"|"dark-theme"|"main-header"|"app.js"/g, '<span class="eldritch-text-green">$&</span>')
-                  .replace(/>/g, '<span class="eldritch-text-red">&gt;</span>')
-                  .replace(/<!-- Navigation elements -->/g, '<span class="eldritch-text-comment">&lt;!-- Navigation elements --&gt;</span>')}
+                <div><span className="eldritch-text-pink">&lt;!DOCTYPE html&gt;</span></div>
+                <div><span className="eldritch-text-red">&lt;html</span> <span className="eldritch-text-yellow">lang=</span><span className="eldritch-text-green">"en"</span><span className="eldritch-text-red">&gt;</span></div>
+                <div><span className="eldritch-text-red">&lt;head&gt;</span></div>
+                <div>  <span className="eldritch-text-red">&lt;meta</span> <span className="eldritch-text-yellow">charset=</span><span className="eldritch-text-green">"UTF-8"</span><span className="eldritch-text-red">&gt;</span></div>
+                <div>  <span className="eldritch-text-red">&lt;meta</span> <span className="eldritch-text-yellow">name=</span><span className="eldritch-text-green">"viewport"</span> <span className="eldritch-text-yellow">content=</span><span className="eldritch-text-green">"width=device-width, initial-scale=1.0"</span><span className="eldritch-text-red">&gt;</span></div>
+                <div>  <span className="eldritch-text-red">&lt;title&gt;</span>Eldritch Theme Demo<span className="eldritch-text-red">&lt;/title&gt;</span></div>
+                <div>  <span className="eldritch-text-red">&lt;link</span> <span className="eldritch-text-yellow">rel=</span><span className="eldritch-text-green">"stylesheet"</span> <span className="eldritch-text-yellow">href=</span><span className="eldritch-text-green">"styles.css"</span><span className="eldritch-text-red">&gt;</span></div>
+                <div><span className="eldritch-text-red">&lt;/head&gt;</span></div>
+                <div><span className="eldritch-text-red">&lt;body</span> <span className="eldritch-text-yellow">class=</span><span className="eldritch-text-green">"dark-theme"</span><span className="eldritch-text-red">&gt;</span></div>
+                <div>  <span className="eldritch-text-red">&lt;header</span> <span className="eldritch-text-yellow">id=</span><span className="eldritch-text-green">"main-header"</span><span className="eldritch-text-red">&gt;</span></div>
+                <div>    <span className="eldritch-text-red">&lt;h1&gt;</span>Welcome to Eldritch<span className="eldritch-text-red">&lt;/h1&gt;</span></div>
+                <div>    <span className="eldritch-text-red">&lt;nav&gt;</span></div>
+                <div>      <span className="eldritch-text-comment">&lt;!-- Navigation elements --&gt;</span></div>
+                <div>    <span className="eldritch-text-red">&lt;/nav&gt;</span></div>
+                <div>  <span className="eldritch-text-red">&lt;/header&gt;</span></div>
+                <div>&nbsp;</div>
+                <div>  <span className="eldritch-text-red">&lt;script</span> <span className="eldritch-text-yellow">src=</span><span className="eldritch-text-green">"app.js"</span><span className="eldritch-text-red">&gt;&lt;/script&gt;</span></div>
+                <div><span className="eldritch-text-red">&lt;/body&gt;</span></div>
+                <div><span className="eldritch-text-red">&lt;/html&gt;</span></div>
               </code></pre>
             </div>
           </div>
@@ -35,17 +46,34 @@ export function Examples() {
             </div>
             <div className="p-6 font-mono text-sm overflow-x-auto">
               <pre className="whitespace-pre-wrap"><code>
-                {pythonExample
-                  .replace(/# A simple Python class example|# Activate the processor|# Using the class/g, '<span class="eldritch-text-comment">$&</span>')
-                  .replace(/class|def|if|else|raise|return|for|in|not/g, '<span class="eldritch-text-purple">$&</span>')
-                  .replace(/EldritchProcessor|ValueError/g, '<span class="eldritch-text-blue">$&</span>')
-                  .replace(/__init__|activate|process_data|print/g, '<span class="eldritch-text-yellow">$&</span>')
-                  .replace(/self|name|power_level|active|data|processor|result|x/g, '<span class="eldritch-text-red">$&</span>')
-                  .replace(/10|0|13|1|2|3|4|5/g, '<span class="eldritch-text-cyan">$&</span>')
-                  .replace(/True|False/g, '<span class="eldritch-text-purple">$&</span>')
-                  .replace(/\*|>|=|\[|\]/g, '<span class="eldritch-text-pink">$&</span>')
-                  .replace(/"Nyarlathotep"|"Insufficient power level"|"Processor not active"/g, '<span class="eldritch-text-green">$&</span>')
-                  .replace(/f"Activating {|} with power level {|}"/g, '<span class="eldritch-text-green">$&</span>')}
+                <div><span className="eldritch-text-comment"># A simple Python class example</span></div>
+                <div><span className="eldritch-text-purple">class</span> <span className="eldritch-text-blue">EldritchProcessor</span>:</div>
+                <div>    <span className="eldritch-text-purple">def</span> <span className="eldritch-text-yellow">__init__</span>(<span className="eldritch-text-red">self</span>, <span className="eldritch-text-red">name</span>, <span className="eldritch-text-red">power_level</span><span className="eldritch-text-pink">=</span><span className="eldritch-text-cyan">10</span>):</div>
+                <div>        <span className="eldritch-text-red">self</span>.<span className="eldritch-text-red">name</span> <span className="eldritch-text-pink">=</span> <span className="eldritch-text-red">name</span></div>
+                <div>        <span className="eldritch-text-red">self</span>.<span className="eldritch-text-red">power_level</span> <span className="eldritch-text-pink">=</span> <span className="eldritch-text-red">power_level</span></div>
+                <div>        <span className="eldritch-text-red">self</span>.<span className="eldritch-text-red">active</span> <span className="eldritch-text-pink">=</span> <span className="eldritch-text-purple">False</span></div>
+                <div>&nbsp;</div>
+                <div>    <span className="eldritch-text-purple">def</span> <span className="eldritch-text-yellow">activate</span>(<span className="eldritch-text-red">self</span>):</div>
+                <div>        <span className="eldritch-text-comment"># Activate the processor</span></div>
+                <div>        <span className="eldritch-text-purple">if</span> <span className="eldritch-text-red">self</span>.<span className="eldritch-text-red">power_level</span> <span className="eldritch-text-pink">{">"}</span> <span className="eldritch-text-cyan">0</span>:</div>
+                <div>            <span className="eldritch-text-red">self</span>.<span className="eldritch-text-red">active</span> <span className="eldritch-text-pink">=</span> <span className="eldritch-text-purple">True</span></div>
+                <div>            <span className="eldritch-text-yellow">print</span>(<span className="eldritch-text-green">f"Activating {"{"}</span><span className="eldritch-text-red">self</span>.<span className="eldritch-text-red">name</span><span className="eldritch-text-green">{"}"} with power level {"{"}</span><span className="eldritch-text-red">self</span>.<span className="eldritch-text-red">power_level</span><span className="eldritch-text-green">{"}"}"</span>)</div>
+                <div>            <span className="eldritch-text-purple">return</span> <span className="eldritch-text-purple">True</span></div>
+                <div>        <span className="eldritch-text-purple">else</span>:</div>
+                <div>            <span className="eldritch-text-yellow">print</span>(<span className="eldritch-text-green">"Insufficient power level"</span>)</div>
+                <div>            <span className="eldritch-text-purple">return</span> <span className="eldritch-text-purple">False</span></div>
+                <div>&nbsp;</div>
+                <div>    <span className="eldritch-text-purple">def</span> <span className="eldritch-text-yellow">process_data</span>(<span className="eldritch-text-red">self</span>, <span className="eldritch-text-red">data</span>):</div>
+                <div>        <span className="eldritch-text-purple">if</span> <span className="eldritch-text-purple">not</span> <span className="eldritch-text-red">self</span>.<span className="eldritch-text-red">active</span>:</div>
+                <div>            <span className="eldritch-text-purple">raise</span> <span className="eldritch-text-blue">ValueError</span>(<span className="eldritch-text-green">"Processor not active"</span>)</div>
+                <div>&nbsp;</div>
+                <div>        <span className="eldritch-text-purple">return</span> <span className="eldritch-text-pink">[</span><span className="eldritch-text-red">x</span> <span className="eldritch-text-pink">*</span> <span className="eldritch-text-red">self</span>.<span className="eldritch-text-red">power_level</span> <span className="eldritch-text-purple">for</span> <span className="eldritch-text-red">x</span> <span className="eldritch-text-purple">in</span> <span className="eldritch-text-red">data</span><span className="eldritch-text-pink">]</span></div>
+                <div>&nbsp;</div>
+                <div><span className="eldritch-text-comment"># Using the class</span></div>
+                <div><span className="eldritch-text-red">processor</span> <span className="eldritch-text-pink">=</span> <span className="eldritch-text-blue">EldritchProcessor</span>(<span className="eldritch-text-green">"Nyarlathotep"</span>, <span className="eldritch-text-cyan">13</span>)</div>
+                <div><span className="eldritch-text-red">processor</span>.<span className="eldritch-text-yellow">activate</span>()</div>
+                <div><span className="eldritch-text-red">result</span> <span className="eldritch-text-pink">=</span> <span className="eldritch-text-red">processor</span>.<span className="eldritch-text-yellow">process_data</span>(<span className="eldritch-text-pink">[</span><span className="eldritch-text-cyan">1</span>, <span className="eldritch-text-cyan">2</span>, <span className="eldritch-text-cyan">3</span>, <span className="eldritch-text-cyan">4</span>, <span className="eldritch-text-cyan">5</span><span className="eldritch-text-pink">]</span>)</div>
+                <div><span className="eldritch-text-yellow">print</span>(<span className="eldritch-text-red">result</span>)</div>
               </code></pre>
             </div>
           </div>
@@ -57,15 +85,48 @@ export function Examples() {
               <span className="text-xs eldritch-text-comment">CSS</span>
             </div>
             <div className="p-6 font-mono text-sm overflow-x-auto">
-              <pre className="whitespace-pre-wrap"><code>
-                {cssExample
-                  .replace(/\/\* Eldritch Theme CSS Variables \*\/|\/\* Base styles \*\//g, '<span class="eldritch-text-comment">$&</span>')
-                  .replace(/:root|body|h1, h2, h3, h4|.button|.button:hover/g, '<span class="eldritch-text-purple">$&</span>')
-                  .replace(/--background|--foreground|--comment|--purple|--red|--yellow|--green|--cyan|--blue|--pink|background-color|color|font-family|line-height|margin-bottom|padding|border-radius|border|opacity/g, '<span class="eldritch-text-red">$&</span>')
-                  .replace(/#1a1a1a|#eeeee6|#7c8377|#a277ff|#ff6767|#ffca85|#61ffca|#82e2ff|#6ab3ff|#ff7aac|'Inter', sans-serif|none/g, '<span class="eldritch-text-green">$&</span>')
-                  .replace(/1.6|1rem|0.5rem|0.25rem|0.9/g, '<span class="eldritch-text-cyan">$&</span>')
-                  .replace(/var/g, '<span class="eldritch-text-pink">var</span>')}
-              </code></pre>
+              <pre className="whitespace-pre-wrap">
+                <code className="flex flex-col">
+                  <div><span className="eldritch-text-comment">/* Eldritch Theme CSS Variables */</span></div>
+                  <div><span className="eldritch-text-purple">:root</span> {"{"}</div>
+                  <div>  <span className="eldritch-text-red">--background</span>: <span className="eldritch-text-green">#1a1a1a</span>;</div>
+                  <div>  <span className="eldritch-text-red">--foreground</span>: <span className="eldritch-text-green">#eeeee6</span>;</div>
+                  <div>  <span className="eldritch-text-red">--comment</span>: <span className="eldritch-text-green">#7c8377</span>;</div>
+                  <div>  <span className="eldritch-text-red">--purple</span>: <span className="eldritch-text-green">#a277ff</span>;</div>
+                  <div>  <span className="eldritch-text-red">--red</span>: <span className="eldritch-text-green">#ff6767</span>;</div>
+                  <div>  <span className="eldritch-text-red">--yellow</span>: <span className="eldritch-text-green">#ffca85</span>;</div>
+                  <div>  <span className="eldritch-text-red">--green</span>: <span className="eldritch-text-green">#61ffca</span>;</div>
+                  <div>  <span className="eldritch-text-red">--cyan</span>: <span className="eldritch-text-green">#82e2ff</span>;</div>
+                  <div>  <span className="eldritch-text-red">--blue</span>: <span className="eldritch-text-green">#6ab3ff</span>;</div>
+                  <div>  <span className="eldritch-text-red">--pink</span>: <span className="eldritch-text-green">#ff7aac</span>;</div>
+                  <div>{"}"}</div>
+                  <div>&nbsp;</div>
+                  <div><span className="eldritch-text-comment">/* Base styles */</span></div>
+                  <div><span className="eldritch-text-purple">body</span> {"{"}</div>
+                  <div>  <span className="eldritch-text-red">background-color</span>: <span className="eldritch-text-pink">var</span>(--background);</div>
+                  <div>  <span className="eldritch-text-red">color</span>: <span className="eldritch-text-pink">var</span>(--foreground);</div>
+                  <div>  <span className="eldritch-text-red">font-family</span>: <span className="eldritch-text-green">'Inter', sans-serif</span>;</div>
+                  <div>  <span className="eldritch-text-red">line-height</span>: <span className="eldritch-text-cyan">1.6</span>;</div>
+                  <div>{"}"}</div>
+                  <div>&nbsp;</div>
+                  <div><span className="eldritch-text-purple">h1, h2, h3, h4</span> {"{"}</div>
+                  <div>  <span className="eldritch-text-red">color</span>: <span className="eldritch-text-pink">var</span>(--purple);</div>
+                  <div>  <span className="eldritch-text-red">margin-bottom</span>: <span className="eldritch-text-cyan">1rem</span>;</div>
+                  <div>{"}"}</div>
+                  <div>&nbsp;</div>
+                  <div><span className="eldritch-text-purple">.button</span> {"{"}</div>
+                  <div>  <span className="eldritch-text-red">background-color</span>: <span className="eldritch-text-pink">var</span>(--purple);</div>
+                  <div>  <span className="eldritch-text-red">color</span>: <span className="eldritch-text-pink">var</span>(--background);</div>
+                  <div>  <span className="eldritch-text-red">padding</span>: <span className="eldritch-text-cyan">0.5rem</span> <span className="eldritch-text-cyan">1rem</span>;</div>
+                  <div>  <span className="eldritch-text-red">border-radius</span>: <span className="eldritch-text-cyan">0.25rem</span>;</div>
+                  <div>  <span className="eldritch-text-red">border</span>: <span className="eldritch-text-green">none</span>;</div>
+                  <div>{"}"}</div>
+                  <div>&nbsp;</div>
+                  <div><span className="eldritch-text-purple">.button:hover</span> {"{"}</div>
+                  <div>  <span className="eldritch-text-red">opacity</span>: <span className="eldritch-text-cyan">0.9</span>;</div>
+                  <div>{"}"}</div>
+                </code>
+              </pre>
             </div>
           </div>
           
