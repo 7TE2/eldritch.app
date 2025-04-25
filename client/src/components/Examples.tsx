@@ -149,7 +149,7 @@ export function Examples() {
                   <div>    <span className="eldritch-text-green">"editor.selectionBackground"</span>: <span className="eldritch-text-green">"#444444"</span>,</div>
                   <div>    <span className="eldritch-text-green">"editor.lineHighlightBackground"</span>: <span className="eldritch-text-green">"#2a2a2a"</span>,</div>
                   <div>    <span className="eldritch-text-green">"editorLineNumber.foreground"</span>: <span className="eldritch-text-green">"#7c8377"</span>,</div>
-                  <div>    <span className="eldritch-text-green">"editorLineNumber.activeForeground"</span>: <span className="eldritch-text-green">"#eeeee6"</span></div>
+                  <div>    <span className="eldritch-text-green">"editorLineNumber.activeForeground"</span>: <span className="eldritch-text-green">"#a277ff"</span></div>
                   <div>  {"}"},</div>
                   <div>  <span className="eldritch-text-green">"tokenColors"</span>: [</div>
                   <div>    {"{"}</div>
